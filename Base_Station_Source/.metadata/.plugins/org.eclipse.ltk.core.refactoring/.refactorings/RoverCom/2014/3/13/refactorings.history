@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;Headers&apos; in &apos;code.ServerMain&apos; to &apos;HeaderMap&apos;&#x0D;&#x0A;- Original project: &apos;RoverCom&apos;&#x0D;&#x0A;- Original element: &apos;code.ServerMain.Headers&apos;&#x0D;&#x0A;- Renamed element: &apos;code.ServerMain.HeaderMap&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;Headers&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;code{ServerMain.java[ServerMain^Headers" name="HeaderMap" references="true" setter="false" stamp="1395699675473" textual="false" version="1.0"/>
+</session>

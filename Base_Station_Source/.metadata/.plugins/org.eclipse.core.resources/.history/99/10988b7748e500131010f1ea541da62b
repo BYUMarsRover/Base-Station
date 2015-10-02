@@ -1,0 +1,9 @@
+package code;
+
+import java.beans.PropertyChangeSupport;
+
+public class HeaderTypeAccessor {
+	
+		private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
+		public synchronized void setData(HeaderType header, int data, boolean overrideAdditivity)
+}

@@ -1,0 +1,94 @@
+package center;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+
+public class RealtimeMap extends JPanel {
+	ImageComponent mapImage;
+	private ArrayList<DrawingRectangle> shapes;
+	private static final Color WAYPOINT = new Color(29,29,236);
+	private static final int WIDTH = 14;
+	private static final int HEIGHT = 700;
+	
+	public RealtimeMap(){
+		shapes = new ArrayList<DrawingRectangle>();
+		
+		this.setBackground(new Color(178, 223, 210));
+		this.setPreferredSize(new Dimension(WIDTH, 700));
+		this.setMinimumSize(new Dimension(WIDTH, 700));
+		this.setMaximumSize(new Dimension(WIDTH, 700));
+		
+		shapes.add(new DrawingRectangle(new Rectangle2D.Double(20, 20, 150, 200), new Color(210, 180, 140, 192)));
+		shapes.add(new DrawingRectangle(new Rectangle2D.Double(200, 200, 5, 5),WAYPOINT));
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+
+		super.paintComponent(g);
+
+		Graphics2D g2 = (Graphics2D)g;
+		drawBackground(g2);
+
+		drawShapes(g2);
+	}
+	
+	private void drawBackground(Graphics2D g2) {
+		g2.setColor(getBackground());
+		g2.fillRect(0,  0, getWidth(), getHeight());
+	}
+
+	private void drawShapes(Graphics2D g2) {
+		for (DrawingRectangle shape : shapes) {
+			shape.draw(g2);
+		}
+	}
+	
+	/////////////////
+	// Drawing Shape
+	/////////////////
+	
+	
+	/*interface DrawingShape {
+		boolean contains(Graphics2D g2, double x, double y);
+		void draw(Graphics2D g2);
+		Rectangle2D getBounds(Graphics2D g2);
+	}*/
+
+
+	class DrawingRectangle {
+
+		private Rectangle2D rect;
+		private Color color;
+		
+		public DrawingRectangle(Rectangle2D rect, Color color) {
+			this.rect = rect;
+			this.color = color;
+		}
+
+		/*@Override
+		public boolean contains(Graphics2D g2, double x, double y) {
+			return rect.contains(x, y);
+		}*/
+		
+		public Color getColor()
+		{
+			return color;
+		}
+
+		public void draw(Graphics2D g2) {
+			g2.setColor(color);
+			g2.fill(rect);
+		}
+		
+		public Rectangle2D getBounds(Graphics2D g2) {
+			return rect.getBounds2D();
+		}
+	}
+}

@@ -1,0 +1,27 @@
+import java.awt.GridLayout;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class JLabelAndJTextField extends JPanel {
+	JLabel label;
+	JTextField textField;
+	
+	public JLabelAndJTextField(){
+		this.setLayout(new GridLayout(1,2));
+		label = new JLabel("default label");
+		textField = new JTextField("default text");
+		this.add(label);
+		this.add(textField);
+	}
+	
+	public void setLabelString(String string){
+		label.setText(string);
+	}
+	
+	public void setTextField(String string){
+		textField.setText(string);
+	}
+}

@@ -1,0 +1,16 @@
+package leftpanel;
+
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.TableModel;
+
+public class WestPanel extends JPanel {
+	JTable armTable;
+	TableModel armDataModel;
+	
+	public WestPanel(){
+		armDataModel = new ArmTableModel();
+	}
+	
+}

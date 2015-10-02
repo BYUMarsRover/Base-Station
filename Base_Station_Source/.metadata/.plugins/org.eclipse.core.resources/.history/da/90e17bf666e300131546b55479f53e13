@@ -1,0 +1,40 @@
+package leftpanel;
+
+import javax.swing.table.AbstractTableModel;
+
+public class ArmTableModel extends AbstractTableModel {
+	private static final int NUM_COLUMNS =  3;
+	private static final int NUM_ROWS    = 10;
+	private String[][] cellData;
+	
+	public ArmTableModel(){
+		cellData = new String[NUM_ROWS][NUM_COLUMNS];
+		cellData[0][0] = "Base Rotate Pos 1";
+		cellData[1][0] = "Shoulder Pos";
+		cellData[2][0] = "Elbow Pos";
+		cellData[3][0] = "Wrist Rotate Pos";
+		cellData[4][0] = "Wrist Flap Pos";
+		cellData[5][0] = "Claw Pos";
+		cellData[6][0] = "Claw Wheels";
+
+	}
+	
+	@Override
+	public int getColumnCount() {
+		// TODO Auto-generated method stub
+		return NUM_COLUMNS;
+	}
+
+	@Override
+	public int getRowCount() {
+		// TODO Auto-generated method stub
+		return NUM_ROWS;
+	}
+
+	@Override
+	public Object getValueAt(int rowIndex, int columnIndex) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

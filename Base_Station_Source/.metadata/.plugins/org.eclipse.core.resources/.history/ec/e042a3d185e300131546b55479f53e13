@@ -1,0 +1,10 @@
+package center;
+
+import javax.swing.JPanel;
+
+public class RealtimeMap extends JPanel {
+	ImageComponent mapImage;
+	public RealtimeMap(){
+		
+	}
+}

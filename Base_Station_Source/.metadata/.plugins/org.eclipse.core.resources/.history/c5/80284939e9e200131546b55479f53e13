@@ -1,0 +1,19 @@
+import java.awt.GridLayout;
+import java.awt.Panel;
+import java.util.ArrayList;
+
+import javax.swing.JTextField;
+
+
+public class VoltagePanel extends Panel {
+	private static final int NUM_METERS = 6;
+	ArrayList<JTextField> voltageMeters;
+	public VoltagePanel(){
+		this.setLayout(new GridLayout(3,2));
+		voltageMeters = new ArrayList<JTextField>();
+		for(int i=0; i<NUM_METERS; i++){
+			voltageMeters.add(new JTextField());
+			this.add(voltageMeters.get(i));
+		}
+	}
+}

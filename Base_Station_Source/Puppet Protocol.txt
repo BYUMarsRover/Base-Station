@@ -1,0 +1,45 @@
+$ --> start
+* --> end
+
+checksum???
+
+puppet 
+6 get/set for each thing
+turret
+shoulder
+elbow
+wrist roll
+wrist pitch
+gripper position/speed
+
+-------------------puppet report
+
+
+// input from puppet	64 bytes long
+$PUPRPT,16bits,16bits,16bits,16bits,16bits,8bit,CHECKSUM(2byte)*
+	tur   sho    elb    wrr    wrp    grp
+16bits = 65535 maximum if unsigned (give 6 characters)
+8bits = 4 characters long
+-----------------puppet command
+
+//output to puppet
+$PUPCMD,16bits,16bits,16bits,16bits,16bits,8bit,CHECKSUM(2byte)*
+	tur   sho    elb    wrr    wrp    grp
+mostly 16bit between 0 and 4095
+8bit - current draw, necessary?
+
+
+Checksum = XOR each byte together (i.e. add without carry)
+0x00
+
+57600 minimum send/recieve baud (64byte * rate per second * # of bits/byte * 10 real bits for 8 data bits)
+
+
+synchronization:
+Steve always sends at 20 times per second
+If he gets something from me and can't read it fast enough, throws it out.
+
+baud rate (for sending and recieving): 115200 (remember this, hard code in)
+
+try/catch for serial port disappearing and make sure you dont KILL EVERYTHING!!!
+

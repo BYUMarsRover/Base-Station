@@ -1,0 +1,19 @@
+package rightpanel;
+
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.TableModel;
+
+public class EastPanel extends JPanel {
+	JTable miscTable;
+	TableModel miscDataModel;
+	
+	public EastPanel(){
+		
+		miscDataModel = new MiscTableModel();
+		miscTable = new JTable((TableModel) miscDataModel);
+		miscTable.getColumnModel().getColumn(0).setWidth(3000);
+		miscTable.getColumnModel().getColumn(1).setWidth(200);
+		this.add(miscTable);
+	}
+}

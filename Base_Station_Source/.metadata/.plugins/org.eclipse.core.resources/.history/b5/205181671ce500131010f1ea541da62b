@@ -1,0 +1,54 @@
+package code;
+
+public class XboxControllerHandler {
+	
+	private static final int NUMHEADERS = 5;	// maximum number of headers per key
+
+    // XboxController things
+    static double leftThumbMagnitude = 0.0, rightThumbMagnitude = 0.0;
+    static double leftThumbDirection = 0.0, rightThumbDirection = 0.0;
+    static double leftTriggerMagnitude = 0.0, rightTriggerMagnitude = 0.0;
+    static int dpadDirection = 0;	// values between 0 and 7
+    static boolean paused = false,
+    		dpadPressed = false,
+    		buttonAPressed = false,
+			buttonBPressed = false,
+			buttonXPressed = false,
+			buttonYPressed = false,
+			leftShoulderPressed = false,
+    		rightShoulderPressed = false,
+    		leftThumbPressed = false,
+    		rightThumbPressed = false;
+
+    private boolean disableController = false;
+    
+    final int NUMCONTROLLER = 18;
+    
+    static final int dpadNIndex = 0;
+    static final int dpadNEIndex = 1;
+    static final int dpadEIndex = 2;
+    static final int dpadSEIndex = 3;
+    static final int dpadSIndex = 4;
+    static final int dpadSWIndex = 5;
+    static final int dpadWIndex = 6;
+    static final int dpadNWIndex = 7;
+    static final int buttonAIndex = 8;
+    static final int buttonBIndex = 9;
+    static final int buttonXIndex = 10;
+    static final int buttonYIndex= 11;
+    static final int leftShoulderIndex = 12;
+    static final int rightShoulderIndex = 13;
+    static final int leftTriggerIndex = 14;
+    static final int rightTriggerIndex = 15;
+    static final int rightThumbButtonIndex = 16;
+    static final int leftThumbButtonIndex = 17;
+    
+    HeaderType[][] controllerHeaders = new HeaderType[NUMCONTROLLER][NUMHEADERS];
+    int[][] controllerValues = new int[NUMCONTROLLER][NUMHEADERS];
+    
+    HeaderType[][] leftThumbHeaders = new HeaderType[360][NUMHEADERS];
+    HeaderType[][] rightThumbHeaders = new HeaderType[360][NUMHEADERS];
+    
+    int[][] leftThumbValues = new int[360][NUMHEADERS];
+    int[][] rightThumbValues = new int[360][NUMHEADERS];
+}

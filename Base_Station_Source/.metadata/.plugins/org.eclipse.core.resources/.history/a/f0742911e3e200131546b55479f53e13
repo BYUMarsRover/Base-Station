@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class TopBar extends JPanel {
+	ArrayList<JTextField> voltageMeter;
+	JTextField currentPositionTextBox;
+	JTextField inputPositionTextBox;
+	public TopBar(){
+		
+	}
+}

@@ -1,0 +1,27 @@
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class GPSTextpanel extends JPanel {
+	JTextField currentPositionTextBox;
+	JTextField inputPositionTextBox;
+	JButton    clearButton;
+	JButton    addButton;
+	public GPSTextpanel(){
+		
+		this.setLayout(new GridLayout(2,2));
+		
+		currentPositionTextBox = new JTextField();
+		inputPositionTextBox   = new JTextField();
+		clearButton = new JButton();
+		addButton = new JButton();
+		
+		this.add(currentPositionTextBox);
+		this.add(clearButton);
+		this.add(inputPositionTextBox);
+		this.add(addButton);
+	}
+}

@@ -1,0 +1,55 @@
+package GUI;
+
+import java.awt.event.KeyListener;
+
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableModel;
+
+import code.HeaderType;
+
+public class EastPanel extends JPanel {
+	JTable miscTable;
+	TableModel miscDataModel;
+	
+	public EastPanel(){
+		
+		miscDataModel = new MiscTableModel();
+		miscTable = new JTable((TableModel) miscDataModel);
+		this.add(miscTable);
+	}
+	@Override
+	public void addKeyListener(KeyListener key)
+	{
+		miscTable.addKeyListener(key);
+		super.addKeyListener(key);
+	}
+	
+	public void setValue(HeaderType header)
+	{
+		if(header == HeaderType.driveAll)
+			;
+		else if(header == HeaderType.driveLeft)
+			;
+		else if(header == HeaderType.driveLeft)
+			;
+		else if(header == HeaderType.driveLeft)
+			;
+		else if(header == HeaderType.driveLeft)
+			;
+		else if(header == HeaderType.driveLeft)
+			;
+		else if(header == HeaderType.driveLeft)
+			;
+		((AbstractTableModel) miscDataModel).fireTableRowsInserted(0, 7);	// update table to reflect new values
+	}
+	
+	cellData[1][0] = "All Wheels";
+	cellData[2][0] = "Left Wheels";
+	cellData[3][0] = "RightWheels";
+	cellData[4][0] = "Gimbal Yaw";
+	cellData[5][0] = "Gimbal Pitch";
+	cellData[5][0] = "Current Camera";
+	cellData[5][0] = "BOOOOST!";
+}

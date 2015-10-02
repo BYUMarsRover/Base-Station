@@ -1,0 +1,16 @@
+package code;
+
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class RelayMain {
+	protected final int PORT = 4444;
+    protected DatagramSocket socket = null;
+    protected CommonData com = null;
+    protected InetAddress address = null;
+    
+    public static void main()
+    {
+    	
+    }
+}

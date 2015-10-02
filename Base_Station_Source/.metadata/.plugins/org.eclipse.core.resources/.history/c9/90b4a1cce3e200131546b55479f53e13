@@ -1,0 +1,12 @@
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+
+
+public class RFrame extends JFrame {
+	public RFrame(){
+		super();
+		this.setLayout(new BorderLayout());
+		
+	}
+}

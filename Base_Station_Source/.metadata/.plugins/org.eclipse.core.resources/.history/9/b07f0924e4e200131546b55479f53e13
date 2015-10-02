@@ -1,0 +1,14 @@
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+
+
+public class RFrame extends JFrame {
+	TopBar topBanana;
+	public RFrame(){
+		super();
+		this.setLayout(new BorderLayout());
+		this.getContentPane().add(topBanana,BorderLayout.NORTH);
+		this.setVisible(true);
+	}
+}

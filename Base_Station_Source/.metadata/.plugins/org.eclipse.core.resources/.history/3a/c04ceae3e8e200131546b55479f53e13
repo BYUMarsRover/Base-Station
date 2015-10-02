@@ -1,0 +1,23 @@
+import java.awt.Component;
+
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+public class JLabelAndJTextField extends Component {
+	JLabel label;
+	JTextField textField;
+	
+	public JLabelAndJTextField(){
+		label = new JLabel("Eat my shorts!");
+		textField = new JTextField();
+	}
+	
+	public void setLabelString(String string){
+		label.setText(string);
+	}
+	
+	public void setTextField(String string){
+		textField.setText(string);
+	}
+}
